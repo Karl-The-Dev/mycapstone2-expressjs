@@ -22,7 +22,8 @@ app.use(express.json()); // [IMPORTANT] parse the json data
 const corsOptions = {
 	
 	origin: ["http://localhost:5173",
-		"http://localhost:4000"
+		"http://localhost:4000",
+		"https://mycapstone2-expressjs.onrender.com"
 	],
 	credentials: true,
 	optionsSuccessStatus: 200
