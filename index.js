@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const passport = require('passport');
-const session = require('express-session');
+// const passport = require('passport');
+// const session = require('express-session');
 
 // add ROUTES here -----------------------------
 
@@ -31,22 +31,6 @@ const corsOptions = {
 
 // activate the corsOptions
 app.use(cors(corsOptions));
-
-// GOOGLE LOGIN -------------------------------------------
-// [Section] Google Login
-// Creates a session with the given data
-// resave prevents the session from overwriting the secret while the session is active
-// saveUninitialized prevents the data from storing data in the session while the data has not yet been initialized
-app.use(session({
-    secret: process.env.clientSecret,
-    resave: false,
-    saveUninitialized: false
-}));
-// Initializes the passport package when the application runs
-app.use(passport.initialize());
-// Creates a session using the passport package
-app.use(passport.session());
-
 
 // ---------------------------------------------------
 
