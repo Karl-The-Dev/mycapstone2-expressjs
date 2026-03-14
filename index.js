@@ -24,7 +24,7 @@ const corsOptions = {
 	origin: ["http://localhost:5173",
 		"http://localhost:4000",
 		"https://mycapstone2-expressjs.onrender.com",
-		"https://mycapstone3-vuejs.vercel.app/"
+		"https://mycapstone3-vuejs.vercel.app"
 	],
 	credentials: true,
 	optionsSuccessStatus: 200
